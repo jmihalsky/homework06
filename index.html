@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/apigif.css">
 </head>
 <body>
     <header></header>
@@ -17,11 +19,21 @@
             <div id="btn-row" class="col-xs-12 col-sm-12 col-md-12"></div>
             
         </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <form id="srch-opt">
+                    <p>Enter the number of GIFs you would like to see</p>
+                    <input type="number" id="rtn-num">
+                </form>
+            </div>
+        </div>
         <div class = "row">
-            <div id="gif-area" class="col-xs-12 col-sm-12 col-md-8"></div>
-            <div id="gif-form" class="col-xs-12 col-sm-12 col-md-4">
-                <form>
-                    
+            <div id="gif-area" class="col-xs-12 col-sm-12 col-md-9"></div>
+            <div id="gif-form" class="col-xs-12 col-sm-12 col-md-3">
+                <form id="btn-add">
+                    <p>Add another item for a search button.</p>
+                    <input type="text" id="btn-frm">
+                    <button id="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
