@@ -53,7 +53,9 @@ function srch_valid(btn_itm){
     return btn_data;
 }
 
-$(".srch-btn").on("click", function() {
+$(document.body).on("click",".srch-btn", function(e) {
+    console.log("response");
+    // e.preventDefault();
     var srch_item = $(this).attr("data");
     var rtnnum = parseInt($("#rtn-num").val());
     console.log(rtnnum);
@@ -102,17 +104,19 @@ function api_assmblr(btn_id,rtn){
         rtn = 5;
     }
     apiurl = url_host + api_path_opt.search_end + "?q=" + btn_id + "&api_key=" + api_key + "&limit=" + rtn;
+    // apiurl = "https://api.giphy.com/v1/gifs/search?q=Office+Space&api_key=5bca9XZR2OVrz32NOhg3qRrVN2d6pOND&limit=5"
     console.log(apiurl);
 }
 
-$("#submit").on("click", function() {
+$("#submit").on("click", function(e) {
+    e.preventDefault();
     var usr_entry = $("#btn-frm").val().trim();
     btn_arry.push($("#btn-frm").val().trim());
     console.log(usr_entry);
-    // btn_add();
+    btn_add();
 });
 
-$(".gifimg").on("click", function() {
+$(document.body).on("click",".gifimg", function() {
     var gif_state = $(this).attr("state");
 
     if(gif_state == "still")
