@@ -10,10 +10,20 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="assets/css/apigif.css">
 </head>
 <body>
-    <header></header>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <h1>Gifftastic - Gif Search</h1>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="container">
         <div class="row">
             <div id="btn-row" class="col-xs-12 col-sm-12 col-md-12"></div>
@@ -21,24 +31,35 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <form id="srch-opt">
-                    <p>Enter the number of GIFs you would like to see</p>
-                    <input type="number" id="rtn-num">
+                <form id="srch-opt" class="form-inline">
+                    <div class="col-xs-12 col-sm-12 col-md-6 form-group">
+                        <label for="rtn-num">Enter the number of GIFs you would like to see (The default is 10): </label>
+                        <input type="number" id="rtn-num" class="form-control">
+                    </div>
+                    <div class="col-xs-12 col-xs-12 col-md-6 form-group">
+                        <label>Select the type of item to search:  </label>
+                        <input type="radio" name="srchtype" id="gif">
+                        <label for="gif" class="radio-inline">Gifs</label>
+                        <input type="radio" name="srchtype" id="sticker">
+                        <label for="sticker" class="radio-inline">Stickers</label>
+                    </div>
                 </form>
             </div>
         </div>
         <div class = "row">
-            <div id="gif-area" class="col-xs-12 col-sm-12 col-md-9"></div>
             <div id="gif-form" class="col-xs-12 col-sm-12 col-md-3">
                 <form id="btn-add">
-                    <p>Add another item for a search button.</p>
+                    <p>Enter another gif item to add a search button.</p>
                     <input type="text" id="btn-frm">
                     <button id="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
+            <div id="gif-area" class="col-xs-12 col-sm-12 col-md-9"></div>
         </div>
     </div>
-    <footer></footer>
+    <footer>
+        <img src="assets/images/PoweredBy_200px-Black_HorizText.png">
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
